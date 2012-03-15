@@ -4595,7 +4595,7 @@ newos6*)
   ;;
 
 nto-qnx*)
-  lt_cv_deplibs_check_method=unknown
+  lt_cv_deplibs_check_method=pass_all
   ;;
 
 openbsd*)
@@ -12308,6 +12308,11 @@ if test -z "$aix_libpath"; then aix_libpath="/usr/lib:/lib"; fi
     fi
     # Workaround some broken pre-1.5 toolchains
     output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | grep conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
+    ;;
+  nto-qnx*)
+    # QNX uses GNU C++ and GNU ld with standard ELF
+    # conventions
+    ld_shlibs_CXX=yes
     ;;
   openbsd2*)
     # C++ shared libraries are fairly broken
